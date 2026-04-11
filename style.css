@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "jost,serif";
+  min-height: 100vh;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 80px;
+  z-index: 999;
+  color: white;
+  background: transparent;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 1600px;
+}
+.logo img{
+height: 90px; ;
+width: auto;
+}
+ .logo .menu {
+  display: flex;
+  gap: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+list-style: none;
+}
+.logo .menu li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 3px;
+  border-radius: 20px;
+  border: 4px solid transparent;
+  transition: all 0.7 ease;
+  white-space: nowrap;
+}
+.logo .menu li a:hover{
+  color: black;
+  background: rgba(100, 181, 238, 0.8);
+border: 2px solid #fff;
+}
+.navbar-toggle{
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width:25px ;
+  height: 3px;
+  margin: 5px auto;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+@media(max-width:880px){
+  .navbar{
+    backdrop-filter: none;
+  }
+  .logo .menu{
+    display: none;
+    flex-direction:column;
+    align-items: flex-start;
+    gap:1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
+  .navbar-toggle{
+    display: block;
+    z-index: 999;
+  }
+  .logo .menu.active{
+    display: flex;
+  }
+  .navbar-toggle.active .bar:nth-child(2){
+    opacity: 0;
+  }
+ .navbar-toggle.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  } 
+  .navbar-toggle.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  } 
+}
