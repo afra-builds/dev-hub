@@ -19,10 +19,10 @@
               <span class="bar"></span>
             </button>
              <ul class="menu">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
             <li><a href="service.html">Service</a></li>
-            <li><a href="project.html">Projects</a></li>
+            <li><a href="#">Projects</a></li>
             <li><a href="booking.html">Booking</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact us</a></li>
@@ -57,7 +57,7 @@
   <div class="featured-section">
     <div class="featured-grid">
       <div class="featured-text">
-        <div class="featured-badge">⭐ Featured Project</div>
+        <div class="featured-badge"> Featured Project</div>
         <h2>Smart Health AI · Telemedicine Platform</h2>
         <p class="featured-desc">End-to-end virtual care ecosystem with AI symptom checker, video consultations, and e-prescriptions.</p>
         <div class="featured-stats">
@@ -235,8 +235,8 @@
           <div class="project-name">${proj.name}</div>
           <div class="client-type">${proj.client}</div>
           <div class="problem-sol">
-            <div class="problem"><strong>⚡ Problem:</strong> ${proj.problem}</div>
-            <div class="solution"><strong>🚀 Solution:</strong> ${proj.solution}</div>
+            <div class="problem"><strong> Problem:</strong> ${proj.problem}</div>
+            <div class="solution"><strong> Solution:</strong> ${proj.solution}</div>
           </div>
           <div class="tech-tags">
             ${proj.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
@@ -263,10 +263,10 @@
     modalBody.innerHTML = `
       <h2>${project.name}</h2>
       <p style="color:#CBD5E1; margin-bottom:12px;"><strong>Client:</strong> ${project.client}</p>
-      <div style="margin: 20px 0;"><strong>📋 Overview</strong><br>${project.detailedDesc || project.solution}</div>
-      <div><strong>⚠️ Problem</strong><br>${project.problem}</div>
-      <div style="margin-top: 16px;"><strong>🔧 Solution</strong><br>${project.solution}</div>
-      <div style="margin-top: 16px;"><strong>✨ Key Features</strong><br><ul>${project.features.map(f => `<li>${f}</li>`).join('')}</ul></div>
+      <div style="margin: 20px 0;"><strong> Overview</strong><br>${project.detailedDesc || project.solution}</div>
+      <div><strong> Problem</strong><br>${project.problem}</div>
+      <div style="margin-top: 16px;"><strong> Solution</strong><br>${project.solution}</div>
+      <div style="margin-top: 16px;"><strong>Key Features</strong><br><ul>${project.features.map(f => `<li>${f}</li>`).join('')}</ul></div>
       <div class="tech-tags" style="margin: 16px 0;"><strong>Tech Stack:</strong> ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join(' ')}</div>
       <div class="results-badge"><strong>📈 Results:</strong> ${project.results}</div>
     `;
@@ -290,12 +290,12 @@
     modalBody.innerHTML = `
       <h2>${featuredProject.name}</h2>
       <p style="color:#CBD5E1;"><strong>Client:</strong> ${featuredProject.client}</p>
-      <div style="margin: 20px 0;"><strong>📋 Overview</strong><br>${featuredProject.detailedDesc}</div>
-      <div><strong>⚠️ Problem</strong><br>${featuredProject.problem}</div>
-      <div><strong>🚀 Solution</strong><br>${featuredProject.solution}</div>
-      <div><strong>✨ Features</strong><br><ul>${featuredProject.features.map(f => `<li>${f}</li>`).join('')}</ul></div>
+      <div style="margin: 20px 0;"><strong> Overview</strong><br>${featuredProject.detailedDesc}</div>
+      <div><strong> Problem</strong><br>${featuredProject.problem}</div>
+      <div><strong> Solution</strong><br>${featuredProject.solution}</div>
+      <div><strong> Features</strong><br><ul>${featuredProject.features.map(f => `<li>${f}</li>`).join('')}</ul></div>
       <div><strong>Tech Stack:</strong> ${featuredProject.tech.map(t => `<span class="tech-tag" style="display:inline-block; margin:4px;">${t}</span>`).join('')}</div>
-      <div class="results-badge"><strong>🔥 Results:</strong> ${featuredProject.results}</div>
+      <div class="results-badge"><strong> Results:</strong> ${featuredProject.results}</div>
     `;
     modal.style.display = "flex";
   }

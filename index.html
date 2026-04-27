@@ -31,15 +31,30 @@
           </div>
         </nav>
   <video autoplay muted loop playsinline class="bg-video" id="desktop-video">
+     <source src="video5.mp4" media="(max-width: 767px)" type="video/mp4">
     <source src="video1.mp4" type="video/mp4" />
 
 </video>
    <div class="hero-buttons">
      <a href="" class="btn1" id="heroBtn">Get Started <i class="fas fa-arrow-right"></i></a>
-      <a href="booking.html" class="btn2" id="heroBtn">Book a Meeting <i class="fa-users"></i></a>
+      <a href="booking.html" class="btn2" id="heroBtn">Book a Meeting </a>
   </div>
 </div>
 </div>
+<script>
+const video = document.getElementById("desktop-video");
+
+function setVideo() {
+  if (window.innerWidth <= 767) {
+    video.src = "video5.mp4";
+  } else {
+    video.src = "video1.mp4";
+  }
+}
+
+setVideo();
+window.addEventListener("resize", setVideo);
+</script>
 <script src="script.js"></script>
 </body>
 </html>
