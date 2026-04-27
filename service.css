@@ -28,7 +28,7 @@ body::before {
   z-index: -1;
 }
 body {
-  background-image: url(/img.png);
+  background-image: url(img.png);
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* premium feel */

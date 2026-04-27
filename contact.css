@@ -25,7 +25,7 @@ body::before {
   z-index: -1;
 }
 body{
-  background-image: url(/img5.jpg);
+  background-image: url(img5.jpg);
   background-attachment: fixed; /* premium feel */
   font-family: "Inter", sans-serif;
   min-height: 100vh;
