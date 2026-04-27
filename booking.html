@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev_Hub</title>
+    <link rel="stylesheet" href="booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+        <div class="hero">
+          <nav class="navbar">  
+            <div class="logo">
+            <img src="pic.png" alt="">
+            <button class="navbar-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+             <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+          </div>
+        </nav>
+  </div>
+ </div>
+ 
+<!-- Hero Section -->
+<section class="hero-booking">
+  <div class="container">
+    <h1>Book a Consultation</h1>
+    <p class="hero-sub">Schedule a meeting with our team and let’s discuss your project.</p>
+    <div class="trust-badge">
+      ✔ Free consultation &nbsp;|&nbsp; ✔ No obligation &nbsp;|&nbsp; ✔ 30-min session
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <!-- 2-col layout: form + benefits -->
+  <div class="booking-grid">
+    <!-- left side: Booking Form -->
+    <div class="glass-form">
+      <form id="bookingForm">
+        <div class="form-row">
+          <label>Full Name *</label>
+          <input type="text" id="fullName"   required>
+        </div>
+        <div class="form-row">
+          <label>Email *</label>
+          <input type="email" id="email" placeholder="hello@company.com" required>
+        </div>
+        <div class="form-row">
+          <label>Phone (optional)</label>
+          <input type="tel" id="phone" placeholder="+92 +++ +++ ">
+        </div>
+        <div class="form-row">
+          <label>Service Type *</label>
+          <select id="serviceType" required>
+            <option value="">Select service</option>
+            <option value="web-development">Web Development</option>
+            <option value="saas">SaaS Development</option>
+            <option value="ai-solutions">AI Solutions</option>
+            <option value="mobile-app">Mobile App</option>
+            <option value="consulting">IT Consulting</option>
+            <option value="post-production">Post-Production</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Preferred Date *</label>
+          <input type="date" id="datePicker" required>
+        </div>
+        
+        <!-- Time slots UI (clickable buttons) -->
+        <div class="time-slots">
+          <div class="slot-title">⏰ Select Time Slot *</div>
+          <div class="slot-buttons" id="timeSlotsContainer">
+            <button type="button" class="time-slot" data-time="10:00 AM">10:00 AM</button>
+            <button type="button" class="time-slot" data-time="11:00 AM">11:00 AM</button>
+            <button type="button" class="time-slot" data-time="12:00 PM">12:00 PM</button>
+            <button type="button" class="time-slot" data-time="02:00 PM">02:00 PM</button>
+            <button type="button" class="time-slot" data-time="03:00 PM">03:00 PM</button>
+            <button type="button" class="time-slot" data-time="04:00 PM">04:00 PM</button>
+          </div>
+          <input type="hidden" id="selectedTime" value="">
+        </div>
+        
+        <div class="form-row">
+          <label>Message (optional)</label>
+          <textarea rows="3" placeholder="Tell us more about your project..."></textarea>
+        </div>
+        
+        <button type="submit" class="book-btn">📅 Book Now → Schedule Meeting</button>
+      </form>
+    </div>
+
+    <!-- Right side: Benefits -->
+    <div class="benefits-card">
+      <h3>Why book with us?</h3>
+      <div class="benefit-item">
+        <div class="benefit-icon">⚡</div>
+        <div class="benefit-text"><strong>Fast response</strong><p>Within 2 business hours</p></div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🧠</div>
+        <div class="benefit-text"><strong>Expert team</strong><p>10+ years of experience</p></div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🎯</div>
+        <div class="benefit-text"><strong>Free consultation</strong><p>No obligation, 30-min discovery</p></div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🌍</div>
+        <div class="benefit-text"><strong>Global clients</strong><p>Trusted by 200+ businesses</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust Section with client reviews & logos -->
+  <div class="trust-section">
+    <div style="font-size: 0.9rem; letter-spacing: 1px; color: #fff;">⭐ TRUSTED BY INDUSTRY LEADERS</div>
+    <div class="trust-logos">
+      <span>🏦 FinTech Corp</span>
+      <span>🏥 HealthChain</span>
+      <span>🚀 SaaS Growth</span>
+      <span>🛍️ RetailPlus</span>
+      <span>🎓 EduGlobal</span>
+    </div>
+    <div style="margin-top: 24px; font-style: italic; color: #A78BFA;">
+      “Working with TechVerse accelerated our platform launch — highly professional.”
+    </div>
+  </div>
+
+  
+<!-- Confirmation Modal -->
+<div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <div style="font-size: 3rem;">✅</div>
+    <h3 style="margin: 16px 0;">Request Sent!</h3>
+    <p>Your consultation request has been received. Our team will reach out to confirm the slot within 2 hours.</p>
+    <button class="close-modal" id="closeModalBtn">Got it</button>
+  </div>
+</div>
+</div>
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-col">
+      <img src="/pic.png" alt="Logo" class="footer-logo">
+      <p>We build modern and scalable digital solutions for the future.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="service.html">Web Development</a></li>
+        <li><a href="service.html">UI/UX Design</a></li>
+        <li><a href="service.html">App Development</a></li>
+        <li><a href="service.html">SEO</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>Email: info@devhub.com</p>
+      <p>Phone: +92 300 1234567</p>
+
+      <div class="socials">
+        <a href="https://www.facebook.com/devhub"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/devhub"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/devhub"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/dev-hub"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DEV HUB | All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+  // Time slot selection logic (highlight active)
+  const timeSlotBtns = document.querySelectorAll('.time-slot');
+  const selectedTimeInput = document.getElementById('selectedTime');
+  
+  function updateActiveSlot(selectedTimeValue) {
+    timeSlotBtns.forEach(btn => {
+      const timeVal = btn.getAttribute('data-time');
+      if (timeVal === selectedTimeValue) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+  
+  timeSlotBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const timeVal = btn.getAttribute('data-time');
+      selectedTimeInput.value = timeVal;
+      updateActiveSlot(timeVal);
+    });
+  });
+  
+  // Set default date to tomorrow (optional)
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  const yyyy = tomorrow.getFullYear();
+  const mm = String(tomorrow.getMonth() + 1).padStart(2,'0');
+  const dd = String(tomorrow.getDate()).padStart(2,'0');
+  const defaultDate = `${yyyy}-${mm}-${dd}`;
+  const datePicker = document.getElementById('datePicker');
+  if(datePicker) datePicker.value = defaultDate;
+  datePicker.min = defaultDate;
+  
+  // Form submission & validation
+  const form = document.getElementById('bookingForm');
+  const modal = document.getElementById('confirmModal');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Get values
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const service = document.getElementById('serviceType').value;
+    const selectedDate = document.getElementById('datePicker').value;
+    const selectedTime = document.getElementById('selectedTime').value;
+    
+    if (!fullName) {
+      alert("Please enter your full name");
+      return;
+    }
+    if (!email || !email.includes('@')) {
+      alert("Valid email required");
+      return;
+    }
+    if (!service) {
+      alert("Select a service type");
+      return;
+    }
+    if (!selectedDate) {
+      alert("Choose a preferred date");
+      return;
+    }
+    if (!selectedTime) {
+      alert("Please select a time slot");
+      return;
+    }
+    
+    // All good -> show modal
+    modal.style.display = "flex";
+    
+    // Reset active time highlight and optional clear hidden after submission but not clear form fully to retain demo,
+    // but we can reset time selection highlight but user may book again.
+    // Keep data, but we just show success.
+    // optionally reset time active?
+    // but not necessary
+  });
+  
+  // Close modal
+  function closeModal() {
+    modal.style.display = "none";
+    // optional: reset time selection? keep as is for convenience
+    // reset the selectedTime value for next booking? we can reset only if user wants new? fine.
+    // but better not to erase everything aggressively.
+  }
+  closeModalBtn.addEventListener('click', closeModal);
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  
+  // dynamic field highlight: disable past dates in date picker
+  const todayDate = new Date().toISOString().split('T')[0];
+  datePicker.min = todayDate;
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="../script.js"></script>
+</body>
+</html>

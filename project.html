@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev_Hub</title>
+    <link rel="stylesheet" href="project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+        <div class="hero">
+          <nav class="navbar">  
+            <div class="logo">
+            <img src="pic.png" alt="">
+            <button class="navbar-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+             <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+          </div>
+        </nav>
+  </div>
+ </div>
+
+<!-- Hero Section -->
+<section class="hero-projects">
+  <div class="container">
+    <h1>Our Work / Case Studies</h1>
+    <p class="hero-sub">We deliver scalable, high-performance digital solutions for modern businesses. Real impact, real results.</p>
+  </div>
+</section>
+
+<div class="container">
+  <!-- Filter -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="enterprise">Enterprise Software</button>
+    <button class="filter-btn" data-filter="web-mobile">Web & Mobile</button>
+    <button class="filter-btn" data-filter="saas">SaaS Products</button>
+    <button class="filter-btn" data-filter="ai">AI Solutions</button>
+  </div>
+
+  <!-- Projects Grid (business context cards) -->
+  <div class="projects-grid" id="projectsGrid"></div>
+
+  <!-- Featured Project (bigger layout: left text + right image) -->
+  <div class="featured-section">
+    <div class="featured-grid">
+      <div class="featured-text">
+        <div class="featured-badge">⭐ Featured Project</div>
+        <h2>Smart Health AI · Telemedicine Platform</h2>
+        <p class="featured-desc">End-to-end virtual care ecosystem with AI symptom checker, video consultations, and e-prescriptions.</p>
+        <div class="featured-stats">
+          <div><span class="stat">65%</span><br>faster diagnosis</div>
+          <div><span class="stat">150k+</span><br>active patients</div>
+          <div><span class="stat">24/7</span><br>automated triage</div>
+        </div>
+        <button class="case-btn" data-modal-id="featuredCase">View Case Study →</button>
+      </div>
+      <div class="featured-img">
+        <img src="https://placehold.co/600x400/1E293B/60A5FA?text=Smart+Health+AI+Dashboard" alt="featured project">
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h3>Let’s build your next project</h3>
+    <p>From concept to launch — we turn complex challenges into growth engines.</p>
+    <a href="booking.html" class="cta-btn">Contact Us for Booking →</a>
+  </div>
+</div>
+<!-- Modal Structure (dynamic but will be populated) -->
+<div id="caseModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-col">
+      <img src="/pic.png" alt="Logo" class="footer-logo">
+      <p>We build modern and scalable digital solutions for the future.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="service.html">Web Development</a></li>
+        <li><a href="service.html">UI/UX Design</a></li>
+        <li><a href="service.html">App Development</a></li>
+        <li><a href="service.html">SEO</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>Email: afrazia45@gmail.com</p>
+      <p>Phone: +92 300 1234567</p>
+
+      <div class="socials">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/afra-zia-7a85b73a2"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DEV HUB | All Rights Reserved</p>
+  </div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  // Projects data (Company-level, with problem, solution, results)
+  const projectsData = [
+    {
+      id: 1,
+      name: "Smart Booking System",
+      client: "Healthcare Clinic Chain",
+      problem: "Manual appointment handling & high no-show rate.",
+      solution: "Automated scheduling platform with reminders & AI optimization.",
+      tech: ["React", "Node.js", "AI API", "PostgreSQL"],
+      category: "enterprise",
+      image: "https://placehold.co/500x280/0F172A/3B82F6?text=Booking+System",
+      results: "40% reduction in no-shows, 30% faster booking flow",
+      features: ["Real-time availability", "SMS/Email reminders", "Analytics dashboard"],
+      detailedDesc: "Built a white-label scheduling engine reducing administrative overhead by 50+ hours/week."
+    },
+    {
+      id: 2,
+      name: "FinDash Analytics",
+      client: "Fintech Startup",
+      problem: "Fragmented data & slow reporting across departments.",
+      solution: "Real-time BI dashboard with predictive forecasting.",
+      tech: ["Python", "Django", "React", "Snowflake"],
+      category: "enterprise",
+      image: "https://placehold.co/500x280/0F172A/8B5CF6?text=FinDash",
+      results: "2x faster decision-making, 35% cost reduction",
+      features: ["Automated KPI tracking", "Role-based access", "Exportable reports"],
+      detailedDesc: "Unified 6 data sources into a single view, enabling leadership to act in real-time."
+    },
+    {
+      id: 3,
+      name: "UrbanGo SuperApp",
+      client: "Mobility & E-commerce Brand",
+      problem: "Separate apps for ride, delivery, and payments → low retention.",
+      solution: "Unified super app with loyalty engine and seamless UX.",
+      tech: ["Flutter", "Firebase", "Stripe", "GraphQL"],
+      category: "web-mobile",
+      image: "https://placehold.co/500x280/0F172A/10B981?text=UrbanGo",
+      results: "2x user engagement, 48% repeat orders",
+      features: ["One-click checkout", "Live tracking", "Rewards system"],
+      detailedDesc: "Merged three services into a single branded experience, boosting daily active users."
+    },
+    {
+      id: 4,
+      name: "RevPilot SaaS",
+      client: "Subscription Analytics Platform",
+      problem: "Churn prediction & revenue leakages in subscription model.",
+      solution: "AI-driven churn prevention + automated dunning workflows.",
+      tech: ["Next.js", "FastAPI", "TensorFlow", "Stripe"],
+      category: "saas",
+      image: "https://placehold.co/500x280/0F172A/F59E0B?text=RevPilot",
+      results: "Churn reduced by 27%, MRR increased 18%",
+      features: ["Predictive churn scores", "Smart payment retries", "Customer health dashboard"],
+      detailedDesc: "Implemented ML models that identify at-risk subscribers 3 weeks in advance."
+    },
+    {
+      id: 5,
+      name: "AI Content Studio",
+      client: "Digital Marketing Agency",
+      problem: "Slow content creation & SEO optimization overhead.",
+      solution: "Generative AI pipeline for blogs, ads & social posts.",
+      tech: ["OpenAI API", "Next.js", "Tailwind", "Supabase"],
+      category: "ai",
+      image: "https://placehold.co/500x280/0F172A/EC4899?text=AI+Studio",
+      results: "4x faster content output, 60% lower production cost",
+      features: ["SEO keyword integration", "Multi-language", "Brand voice fine-tuning"],
+      detailedDesc: "Automated 80% of repetitive writing, freeing creatives for strategy."
+    },
+    {
+      id: 6,
+      name: "MediMeet Doctor Portal",
+      client: "Telehealth Enterprise",
+      problem: "Complex appointment coordination & patient record access.",
+      solution: "End-to-end virtual clinic with video + e-prescription.",
+      tech: ["WebRTC", "Node", "MongoDB", "React Native"],
+      category: "web-mobile",
+      image: "https://placehold.co/500x280/0F172A/06B6D4?text=MediMeet",
+      results: "90% patient satisfaction, 50k monthly consults",
+      features: ["HIPAA compliant", "Queue management", "Digital prescriptions"],
+      detailedDesc: "Scaled to handle 200+ concurrent providers with <100ms latency."
+    }
+  ];
+
+  function renderProjects(filter = "all") {
+    const grid = document.getElementById("projectsGrid");
+    const filtered = filter === "all" ? projectsData : projectsData.filter(p => p.category === filter);
+    grid.innerHTML = filtered.map(proj => `
+      <div class="project-card" data-category="${proj.category}">
+        <img class="card-img" src="${proj.image}" alt="${proj.name}">
+        <div class="card-content">
+          <div class="project-name">${proj.name}</div>
+          <div class="client-type">${proj.client}</div>
+          <div class="problem-sol">
+            <div class="problem"><strong>⚡ Problem:</strong> ${proj.problem}</div>
+            <div class="solution"><strong>🚀 Solution:</strong> ${proj.solution}</div>
+          </div>
+          <div class="tech-tags">
+            ${proj.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+          </div>
+          <button class="case-btn" data-id="${proj.id}">View Case Study →</button>
+        </div>
+      </div>
+    `).join('');
+    
+    // attach event listeners to each button
+    document.querySelectorAll('.case-btn[data-id]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = parseInt(btn.getAttribute('data-id'));
+        const project = projectsData.find(p => p.id === id);
+        if (project) openModal(project);
+      });
+    });
+  }
+
+  // featured project modal (separate but we reuse logic)
+  function openModal(project) {
+    const modal = document.getElementById("caseModal");
+    const modalBody = document.getElementById("modalBody");
+    modalBody.innerHTML = `
+      <h2>${project.name}</h2>
+      <p style="color:#CBD5E1; margin-bottom:12px;"><strong>Client:</strong> ${project.client}</p>
+      <div style="margin: 20px 0;"><strong>📋 Overview</strong><br>${project.detailedDesc || project.solution}</div>
+      <div><strong>⚠️ Problem</strong><br>${project.problem}</div>
+      <div style="margin-top: 16px;"><strong>🔧 Solution</strong><br>${project.solution}</div>
+      <div style="margin-top: 16px;"><strong>✨ Key Features</strong><br><ul>${project.features.map(f => `<li>${f}</li>`).join('')}</ul></div>
+      <div class="tech-tags" style="margin: 16px 0;"><strong>Tech Stack:</strong> ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join(' ')}</div>
+      <div class="results-badge"><strong>📈 Results:</strong> ${project.results}</div>
+    `;
+    modal.style.display = "flex";
+  }
+
+  // featured case custom content
+  function openFeaturedModal() {
+    const featuredProject = {
+      name: "Smart Health AI · Telemedicine Platform",
+      client: "Multi-state Healthcare Network",
+      problem: "Inefficient patient triage, long wait times & legacy appointment systems.",
+      solution: "AI-driven symptom checker + integrated video consultations + automated scheduling.",
+      features: ["AI Symptom Triage", "E-prescriptions", "Real-time analytics", "Clinic dashboard"],
+      tech: ["Python", "React", "TensorFlow", "Twilio", "AWS"],
+      results: "65% faster diagnosis, 150k+ patients handled, 40% administrative cost reduction",
+      detailedDesc: "Deployed enterprise telemedicine infrastructure, reducing ER visits by 23% within 6 months."
+    };
+    const modal = document.getElementById("caseModal");
+    const modalBody = document.getElementById("modalBody");
+    modalBody.innerHTML = `
+      <h2>${featuredProject.name}</h2>
+      <p style="color:#CBD5E1;"><strong>Client:</strong> ${featuredProject.client}</p>
+      <div style="margin: 20px 0;"><strong>📋 Overview</strong><br>${featuredProject.detailedDesc}</div>
+      <div><strong>⚠️ Problem</strong><br>${featuredProject.problem}</div>
+      <div><strong>🚀 Solution</strong><br>${featuredProject.solution}</div>
+      <div><strong>✨ Features</strong><br><ul>${featuredProject.features.map(f => `<li>${f}</li>`).join('')}</ul></div>
+      <div><strong>Tech Stack:</strong> ${featuredProject.tech.map(t => `<span class="tech-tag" style="display:inline-block; margin:4px;">${t}</span>`).join('')}</div>
+      <div class="results-badge"><strong>🔥 Results:</strong> ${featuredProject.results}</div>
+    `;
+    modal.style.display = "flex";
+  }
+
+  // Filter UI logic
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const filterVal = btn.getAttribute("data-filter");
+      renderProjects(filterVal);
+    });
+  });
+
+  // modal close + featured button
+  const modal = document.getElementById("caseModal");
+  const closeModalSpan = document.querySelector(".close-modal");
+  closeModalSpan.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+
+  // featured modal listener
+  const featuredBtn = document.querySelector("[data-modal-id='featuredCase']");
+  if (featuredBtn) featuredBtn.addEventListener("click", openFeaturedModal);
+  
+  // initial render
+  renderProjects("all");
+</script>
+<script src="../script.js"></script>
+</body>
+</html>

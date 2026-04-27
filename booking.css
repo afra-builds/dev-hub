@@ -1,0 +1,483 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #00E5FF;   /* glow color (same as bg) */
+  --secondary: #3B82F6; /* soft blue */
+  --bg-dark: #050A14;
+  --text: #ffffff;
+  --text-soft: #9CA3AF;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 10, 20, 0.75); /* dark overlay */
+  z-index: -1;
+}
+body {
+  background-image: url(/img5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* premium feel */
+}
+body{
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+   overflow-x: hidden;
+    background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+position: relative; 
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 80px;
+  z-index: 999;
+  color: rgb(253, 250, 250);
+  border-radius: 100px;
+  background: transparent;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 1600px;
+}
+.logo img{
+height: 90px; ;
+width: auto;
+}
+ .logo .menu {
+  display: flex;
+  gap: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+list-style: none;
+}
+.logo .menu li a{
+  text-decoration: none;
+  color: #f2efef;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 3px;
+  border-radius: 20px;
+  border: 4px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
+}
+.logo .menu li a:hover{
+  color: black;
+  background: rgba(100, 181, 238, 0.8);
+border: 2px solid #ae355539;
+}
+.navbar-toggle{
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width:25px ;
+  height: 3px;
+  margin: 5px auto;
+  background: #f0eded;
+  transition: all 0.3s ease-in-out;
+}
+/* hero section */
+    .hero-booking {
+      padding: 64px 0 40px;
+      text-align: center;
+      background: radial-gradient(ellipse at 70% 20%, rgba(37, 99, 235, 0.12), transparent);
+    }
+
+    .hero-booking h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, #FFFFFF, #94A3B8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: #94A3B8;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .trust-badge {
+      display: inline-flex;
+      gap: 24px;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(8px);
+      padding: 10px 24px;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      color: #A78BFA;
+    }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+    /* main booking grid */
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin: 50px 0 60px;
+    }
+
+    /* glass form */
+    .glass-form {
+      background: rgba(18, 22, 30, 0.7);
+      backdrop-filter: blur(12px);
+      border-radius: 40px;
+      padding: 36px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.4);
+    }
+
+    .form-row {
+      margin-bottom: 24px;
+      color: rgb(248, 239, 239);
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #CBD5E1;
+      font-size: 0.9rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      background: rgba(10, 12, 16, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0);
+      border-radius: 20px;
+      padding: 14px 18px;
+      color: #F1F5F9;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #60A5FA;
+      box-shadow: 0 0 0 3px rgba(96,165,250,0.2);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    /* time slots */
+    .time-slots {
+      color: #fff;
+      margin: 16px 0 28px;
+    }
+    .slot-title {
+      font-weight: 600;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+    .slot-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .time-slot {
+      background: rgba(30, 34, 45, 0.8);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 10px 22px;
+      border-radius: 48px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #CBD5E1;
+    }
+    .time-slot:hover {
+      background: #2563EB30;
+      border-color: #60A5FA;
+    }
+    .time-slot.active {
+      background: #2563EB;
+      border-color: #2563EB;
+      color: white;
+      box-shadow: 0 5px 12px rgba(37,99,235,0.3);
+    }
+
+    /* CTA button */
+    .book-btn {
+      background: #2563EB;
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 48px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+      margin-top: 8px;
+      font-family: inherit;
+    }
+    .book-btn:hover {
+      background: #1D4ED8;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px -8px #2563EB;
+    }
+
+    /* benefits right side */
+    .benefits-card {
+      background: linear-gradient(145deg, #111827, #0F172A);
+      border-radius: 40px;
+      padding: 36px;
+      border: 1px solid rgba(255,255,255,0.05);
+      height: fit-content;
+    }
+    .benefits-card h3 {
+      color: #fff;
+      font-size: 1.8rem;
+      margin-bottom: 28px;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .benefit-icon {
+      font-size: 2rem;
+    }
+    .benefit-text strong {
+      display: block;
+      color: #F1F5F9;
+      font-size: 1.1rem;
+    }
+    .benefit-text p {
+      color: #94A3B8;
+      font-size: 0.9rem;
+    }
+
+    /* trust section (logos / reviews) */
+    .trust-section {
+      margin: 30px 0 50px;
+      text-align: center;
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 60px;
+      padding: 28px 20px;
+      backdrop-filter: blur(4px);
+    }
+    .trust-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 20px;
+      opacity: 0.7;
+      font-weight: 500;
+      color: #e5e9ef;
+    }
+    .trust-logos span {
+      background: rgba(255,255,255,0.03);
+      padding: 6px 18px;
+      border-radius: 100px;
+    }
+    /* modal confirmation */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      background: #0F172A;
+      max-width: 450px;
+      padding: 40px;
+      color: #fff;
+      border-radius: 48px;
+      text-align: center;
+      border: 1px solid #2563EB;
+      animation: fadeUp 0.3s;
+    }
+    @keyframes fadeUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .close-modal {
+      margin-top: 20px;
+      background: #2563EB;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 40px;
+      color: white;
+      cursor: pointer;
+    }
+    @media (max-width: 900px) {
+      .booking-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .hero-booking h1 {
+        font-size: 2.5rem;
+      }
+      .container {
+        padding: 0 20px;
+      }
+      .glass-form, .benefits-card {
+        padding: 28px;
+      }
+    }
+ .footer {
+  background: #0f172a;
+  color: #fff;
+  width: 100%;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+    max-width: 1100px;
+  margin: auto;
+}
+
+.footer-col h2,
+.footer-col h3 {
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  color: #cbd5e1;
+  margin-top: 0;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin: 8px 0;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #cbd5e1;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #38bdf8;
+}
+
+.logo {
+  color: #38bdf8;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+ .footer-logo {
+  width: 100px;   /* size control */
+  margin-bottom: 0px;
+}     
+/* default */
+.service-img {
+  max-width: 100%;
+}
+@media(max-width:880px){
+
+  .navbar{
+    backdrop-filter: none;
+  }
+
+  .logo .menu{
+    display: none; /* default hidden */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.7rem;
+    position: fixed;   /* 🔥 change from absolute */
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: -100%;  /* 🔥 start off-screen */
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    background: rgba(5,10,20,0.95); /* 🔥 important for visibility */
+    transition: right 0.4s ease; /* smooth slide */
+  }
+
+  .logo .menu.active{
+    display: flex;
+    right: 0; /* 🔥 slide in */
+  }
+
+  .navbar-toggle{
+    display: block;
+    z-index: 1000;
+  }
+
+  /* toggle animation */
+  .navbar-toggle.active .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  .navbar-toggle.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  } 
+
+  .navbar-toggle.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  } 
+}  

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev_Hub</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+        <div class="hero">
+          <nav class="navbar">  
+            <div class="logo">
+            <img src="pic.png" alt="">
+            <button class="navbar-toggle">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+             <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+          </div>
+        </nav>
+  </div>
+ </div>
+ 
+<!-- Hero Section -->
+<section class="hero-saas">
+  <div class="container">
+    <h1>Let’s Build Something Amazing Together</h1>
+    <p>AI-driven innovation, scalable SaaS, and digital transformation — let's turn your vision into reality.</p>
+  </div>
+</section>
+
+<div class="container">
+  <!-- Contact Info Cards (Email, Phone, Address) -->
+  <div class="contact-cards">
+    <div class="glass-card">
+      <div class="card-icon">📧</div>
+      <h3>Email</h3>
+      <a href="mailto:info@devhub.com">info@devhub.com</a>
+      <p style="margin-top: 6px; font-size:0.8rem;">Response within 4h</p>
+    </div>
+    <div class="glass-card">
+      <div class="card-icon">📞</div>
+      <h3>Phone</h3>
+      <a href="tel:+923001234567">+92 300 1234567</a>
+      <p style="margin-top: 6px; font-size:0.8rem;">Mon-Fri 9AM–6PM PT</p>
+    </div>
+    <div class="glass-card">
+      <div class="card-icon">📍</div>
+      <h3>Address</h3>
+      <p>Lahore DHA phase 2, Pakistan</p>
+    </div>
+    <div class="glass-card">
+      <div class="card-icon">⚡</div>
+      <h3>Support 24/7</h3>
+      <p>Enterprise priority support</p>
+    </div>
+  </div>
+
+  <!-- Main 2-Column Section: FORM + MAP & INFO -->
+  <div class="contact-main">
+    <div class="two-columns">
+      <!-- Left: Glass Form -->
+      <div class="glass-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="fullName" required>
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" id="email" placeholder="hello@company.com" required>
+          </div>
+          <div class="form-group">
+            <label>Phone (optional)</label>
+            <input type="tel" id="phone" placeholder="+92 +++ +++">
+          </div>
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea rows="4" id="message" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message </button>
+        </form>
+      </div>
+
+      <!-- Right: Google Map + Office Info -->
+      <div class="info-map">
+        <h3>Visit Our Hub</h3>
+        <div class="office-detail">
+          <div class="detail-line">
+            <span>🏢</span> <span>Lahore DHA phase 2, Pakistan</span>
+          </div>
+          <div class="detail-line">
+            <span>⏰</span> <span>Working hours: 9:00 AM – 6:00 PM PST</span>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe src="https://maps.google.com/maps?q=Lahore+DHA+phase+2%2C+Pakistan&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="response-badge">
+          ✨ We usually respond within 24h. Your data is secure & never shared.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section: Book Free Consultation -->
+  <div class="cta-bottom">
+    <h2>Ready to scale with AI & SaaS?</h2>
+    <p>Get a free 30-min strategy session with our product experts.</p>
+    <a href="#" class="cta-btn" id="bookConsultBtn">📅 Book a Free Consultation →</a>
+  </div>
+</div>
+
+<!-- Floating WhatsApp Button (prefilled message) -->
+<a href="https://wa.me/923266489112?text=Hello%20I%20want%20to%20start%20a%20project%20with%20DEV%20HUB" 
+   target="_blank" rel="noopener noreferrer" class="whatsapp-float" id="whatsappButton">
+  💬 Message us on WhatsApp
+</a>
+
+<!-- Live Chat Widget (expand/collapse) -->
+<div class="chat-widget" id="chatWidget">
+  <div id="chatExpandable" class="chat-expand hidden-chat">
+    <div class="chat-header">
+      <span>💬 DEV HUB AI Support</span>
+      <span style="cursor:pointer;" id="closeChatBtn">✕</span>
+    </div>
+    <div class="chat-body">
+      <div class="chat-msg">👋 Hi there! How can we help you today? Let's discuss your project.</div>
+      <div class="chat-input-group">
+        <input type="text" id="chatMessageInput" placeholder="Write a message...">
+        <button id="chatSendBtn" class="chat-send">➤</button>
+      </div>
+    </div>
+  </div>
+  <button class="chat-bubble" id="openChatBtn">
+    💬 Live Chat
+  </button>
+</div>
+
+<!-- Auto-response modal for form success -->
+<div id="successToast" style="position: fixed; bottom: 30px; left: 20px; background: #10B981; padding: 12px 24px; border-radius: 60px; color: white; font-weight: 500; backdrop-filter: blur(8px); z-index: 200; display: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+  ✅ Message sent! We'll reply within 24h.
+</div>
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-col">
+      <img src="/pic.png" alt="Logo" class="footer-logo">
+      <p>We build modern and scalable digital solutions for the future.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="service.html">Web Development</a></li>
+        <li><a href="service.html">UI/UX Design</a></li>
+        <li><a href="service.html">App Development</a></li>
+        <li><a href="service.html">SEO</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>Email: info@devhub.com</p>
+      <p>Phone: +92 300 1234567</p>
+
+      <div class="socials">
+        <a href="https://www.facebook.com/dev.hub"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/dev_hub"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/dev_hub"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/dev-hub"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DEV Hub | All Rights Reserved</p>
+  </div>
+</footer>
+<script>
+  // Form validation & toast
+  const form = document.getElementById('contactForm');
+  const toast = document.getElementById('successToast');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!fullName) { alert("Please enter your full name"); return; }
+    if (!email || !email.includes('@')) { alert("Valid email is required"); return; }
+    if (!message) { alert("Write your project message"); return; }
+
+    // Show success toast
+    toast.style.display = "block";
+    setTimeout(() => { toast.style.display = "none"; }, 3000);
+    form.reset();
+  });
+
+  // WhatsApp button — number demo (replace with real number) 
+  // we already have valid href
+
+  // Live chat logic (expand/collapse)
+  const chatExpand = document.getElementById('chatExpandable');
+  const openChatBtn = document.getElementById('openChatBtn');
+  const closeChatBtn = document.getElementById('closeChatBtn');
+
+  openChatBtn.addEventListener('click', () => {
+    chatExpand.classList.remove('hidden-chat');
+  });
+  closeChatBtn.addEventListener('click', () => {
+    chatExpand.classList.add('hidden-chat');
+  });
+
+  // Simulate chat send (demo)
+  const chatSend = document.getElementById('chatSendBtn');
+  const chatInput = document.getElementById('chatMessageInput');
+  const chatBody = document.querySelector('.chat-body');
+
+  chatSend.addEventListener('click', () => {
+    const msgText = chatInput.value.trim();
+    if (msgText === "") return;
+    const userMsgDiv = document.createElement('div');
+    userMsgDiv.className = 'chat-msg';
+    userMsgDiv.style.background = '#2563EB';
+    userMsgDiv.style.marginLeft = '20px';
+    userMsgDiv.style.textAlign = 'right';
+    userMsgDiv.innerText = msgText;
+    chatBody.insertBefore(userMsgDiv, chatBody.querySelector('.chat-input-group'));
+    chatInput.value = "";
+    // Auto reply after 1 sec
+    setTimeout(() => {
+      const replyDiv = document.createElement('div');
+      replyDiv.className = 'chat-msg';
+      replyDiv.style.background = 'rgba(96,165,250,0.2)';
+      replyDiv.innerText = "Thanks! Our team will reach out shortly. 🚀";
+      chatBody.insertBefore(replyDiv, chatBody.querySelector('.chat-input-group'));
+    }, 800);
+  });
+
+  // Optional CTA alert for "Book Consultation"
+  const consultBtn = document.getElementById('bookConsultBtn');
+  consultBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert("Schedule a free consultation: our team will contact you within 24h to confirm time.");
+  });
+
+  // minor: close chat if click outside? for better UX - optional
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

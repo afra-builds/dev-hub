@@ -1,16 +1,17 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap');
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body{
-  font-family: "jost,serif";
+  font-family: "Inter", sans-serif;
   min-height: 100vh;
 }
 .hero {
   position: relative;
-  height: 100vh;
   overflow: hidden;
+  height: 100dvh;
 }
 
 .bg-video {
@@ -19,8 +20,8 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
+   object-fit: cover;
+  object-position: center;
 }
 .navbar {
   position: sticky;
@@ -32,6 +33,7 @@ body{
   height: 80px;
   z-index: 999;
   color: white;
+  border-radius: 100px;
   background: transparent;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
@@ -86,6 +88,65 @@ border: 2px solid #fff;
   background: #fff;
   transition: all 0.3s ease-in-out;
 }
+/* BUTTON CONTAINER */
+.hero-buttons{
+  position:absolute;
+  top: 70%;
+  left: 45%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transform: translateX(-50%);
+   flex-wrap: wrap;
+}
+/* BUTTON STYLE */
+.btn1, .btn2{
+  text-decoration: none;
+  padding: 14px 40px;
+  border-radius: 30px;
+  background: transparent;
+  color: #fff;
+  position: relative;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+
+
+.btn1, .btn2{
+  border: 2px solid ;
+  color: white;
+  position: relative;
+}
+
+.btn1::before, .btn2::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(90deg, #e9dff4ce, #a39bacce, #9d8598);
+  -webkit-mask: 
+    linear-gradient(#ffffff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.btn1:hover{
+  
+  background:#1a5997;
+}
+.btn2:hover{
+  background: #1a5997;
+  color: white;
+}
+.btn1:hover, .btn2:hover{
+  transform: scale(1.05);
+}
+
 @media(max-width:880px){
   .navbar{
     backdrop-filter: none;
@@ -120,4 +181,29 @@ border: 2px solid #fff;
   .navbar-toggle.active .bar:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
   } 
+}
+@media(max-width:768px){
+
+  .hero-buttons{
+    top: 80%;   /* thoda neeche */
+    flex-direction: column; /* buttons vertical ho jayenge */
+    gap: 15px;
+  }
+
+  .btn1, .btn2{
+    width: 200px;   /* equal size */
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+}
+@media(max-width:768px){
+  .bg-video{
+    object-position: center;
+  object-fit: 50% 30%;
+  }
+  .hero{
+    height: 100dvh;
+  }
 }
