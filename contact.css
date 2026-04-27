@@ -400,7 +400,7 @@ border: 2px solid #ae355539;
 
     .chat-bubble:hover {
       transform: scale(1.02);
-      background: linear-gradient(135deg, #1D4ED8, #3B82F6);
+      background: linear-gradient(135deg, #1c377c, #3B82F6);
     }
 
     .chat-expand {
@@ -423,13 +423,16 @@ border: 2px solid #ae355539;
       justify-content: space-between;
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-
+.chat-header span {
+      color: #fff;
+    }
     .chat-body {
       padding: 18px;
     }
 
     .chat-msg {
-      background: rgba(37,99,235,0.2);
+      background: rgba(19, 20, 20, 0.908);
+      color: #fff;
       padding: 10px 14px;
       border-radius: 20px;
       margin-bottom: 16px;
@@ -452,7 +455,7 @@ border: 2px solid #ae355539;
     }
 
     .chat-send {
-      background: #2563EB;
+      background: rgba(9, 56, 158, 0.838);
       border: none;
       border-radius: 40px;
       padding: 0 14px;
