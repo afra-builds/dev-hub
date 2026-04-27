@@ -113,10 +113,10 @@
 
 ## 📧 Contact Information
 
-- **Email:** hello@technova.ai
-- **Phone:** +1 (555) 123-4567
+- **Email:** info@devhub.com
+- **Phone:** +92 +++ ++
 - **WhatsApp:** +92 326 6489112 (pre-filled message)
-- **Location:** 450 Bryant Street, San Francisco, CA
+- **Location:** Lahore DHA Phase 2 Pakistan
 
 ---
 
