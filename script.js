@@ -30,3 +30,15 @@
   }
 
 });
+const video = document.getElementById("desktop-video");
+
+function setVideo() {
+  if (window.innerWidth <= 767) {
+    video.src = "video2.mp4";
+  } else {
+    video.src = "video1.mp4";
+  }
+}
+
+setVideo();
+window.addEventListener("resize", setVideo);
