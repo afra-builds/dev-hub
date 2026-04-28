@@ -1,24 +1,24 @@
-# 🚀 Dev_Hub – AI-Powered Digital Solutions Agency
-## 📌 Project Overview
+#  Dev_Hub – AI-Powered Digital Solutions Agency
+##  Project Overview
 
 **Dev_Hub** is a modern, fully responsive company website for a digital solutions agency. The website showcases the agency's services, projects, blog, booking system, and contact information in a professional, glassmorphism UI with dark theme and smooth animations.
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🏠 Home Section
+###  Home Section
 - Fullscreen hero with video background
 - Call-to-action buttons (Get Started, Book a Meeting)
 
-### 👥 About Us
+###  About Us
 - Company story and mission
 - Statistics (Projects, Experts, Satisfaction)
 - Vision & Mission cards
 - Features grid (Expertise, Innovation, Fast Delivery, Support)
 - Testimonial section
 
-### 💼 Services
+###  Services
 - 8 core services with alternating layout:
   - Software Development
   - Web & Mobile Solutions
@@ -30,7 +30,7 @@
   - Meeting Scheduler
 - Floating image animations on each service card
 
-### 📁 Projects / Case Studies
+###  Projects / Case Studies
 - Filterable project grid (All, Enterprise, Web & Mobile, SaaS, AI)
 - Dynamic project cards with:
   - Project name
@@ -41,7 +41,7 @@
 - Featured project section with stats
 - Modal popup for detailed case study
 
-### 📅 Booking Section
+###  Booking Section
 - Consultation booking form with:
   - Full Name, Email, Phone
   - Service Type dropdown
@@ -52,13 +52,13 @@
 - Trust badges and client logos
 - Confirmation modal on form submit
 
-### 📝 Blog
+###  Blog
 - Featured blog post (horizontal layout)
 - Blog grid with 6 articles
 - Categories: AI, Marketing, Development, Post Production, SaaS
 - Read more buttons with hover effects
 
-### 📞 Contact Us
+###  Contact Us
 - Contact info cards (Email, Phone, Address, Support)
 - 2-column layout: Contact Form + Google Map
 - Form with validation
@@ -66,13 +66,13 @@
 - Floating WhatsApp button with pre-filled message
 - Success toast notification
 
-### 🔧 Footer
+### Footer
 - Logo and brand description
 - Quick links navigation
 - Services list
 - Contact info & social media icons
 ---
-## 🛠️ Technologies Used
+##  Technologies Used
 | Technology | Purpose |
 |------------|---------|
 | HTML5 | Structure |
@@ -83,7 +83,7 @@
 | AOS Library | Scroll animations |
 | Google Maps Embed | Location map |
 ---
-## 📱 Responsive Design
+##  Responsive Design
 | Device | Breakpoint | Layout Behavior |
 |--------|------------|----------------|
 | Desktop | 1200px+ | 3-4 columns, full layout |
@@ -96,10 +96,10 @@
 - ✅ Forms become full width
 - ✅ Touch-friendly button sizes
 ---
-## 🗂️ Project Structure
+##  Project Structure
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 1. **Clone or download** the project files
 2. Make sure all images and videos are in the correct paths:
@@ -111,7 +111,7 @@
 
 ---
 
-## 📧 Contact Information
+##  Contact Information
 
 - **Email:** info@devhub.com
 - **Phone:** +92 +++ ++
@@ -120,7 +120,7 @@
 
 ---
 
-## 🎨 Design Credits
+##  Design Credits
 
 - **UI/UX Design:** Dev_Hub Team
 - **Icons:** Font Awesome
@@ -129,7 +129,7 @@
 
 ---
 
-## 🔧 Future Improvements
+##  Future Improvements
 
 - [ ] Backend integration for form submissions
 - [ ] Database for booking appointments
@@ -140,13 +140,13 @@
 
 ---
 
-## 📄 License
+##  License
 
 © 2026 Dev_Hub | All Rights Reserved
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - AOS Library for scroll animations
 - Font Awesome for premium icons
