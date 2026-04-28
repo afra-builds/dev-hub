@@ -26,7 +26,7 @@
             font-family: "Inter", sans-serif;
             min-height: 100vh;
             overflow-x: hidden;
-            background-image: url('img5.jpg');
+            background-image: url('img1.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -710,3 +710,26 @@
             margin: 0 auto;
             padding: 0 20px;
         }
+        /* Desktop par normal footer show hoga */
+/* Desktop: full footer */
+.footer {
+  display: block;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+
+  /* poora main footer hide */
+  .footer-container {
+    display: none;
+  }
+
+  /* sirf last line show */
+  .footer-bottom {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #94a3b8;
+  }
+}

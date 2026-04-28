@@ -25,7 +25,7 @@ body::before {
   z-index: -1;
 }
 body{
-  background-image: url(img5.jpg);
+  background-image: url('img1.jpg');
   background-attachment: fixed; /* premium feel */
   font-family: "Inter", sans-serif;
   min-height: 100vh;
@@ -643,4 +643,26 @@ border: 2px solid #ae355539;
   .navbar-toggle.active .bar:nth-child(3){
     transform: translateY(-8px) rotate(-45deg);
   } 
-}  
+} 
+/* Desktop: full footer */
+.footer {
+  display: block;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+
+  /* poora main footer hide */
+  .footer-container {
+    display: none;
+  }
+
+  /* sirf last line show */
+  .footer-bottom {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #94a3b8;
+  }
+}

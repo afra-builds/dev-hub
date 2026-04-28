@@ -33,7 +33,7 @@
         }
         
         body {
-            background-image: url('img.png');
+            background-image: url('img1.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -602,3 +602,25 @@
                 height: 60px;
             }
         }
+/* Desktop: full footer */
+.footer {
+  display: block;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+
+  /* poora main footer hide */
+  .footer-container {
+    display: none;
+  }
+
+  /* sirf last line show */
+  .footer-bottom {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #94a3b8;
+  }
+}
